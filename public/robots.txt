@@ -1,0 +1,6 @@
+# شمس النيل للطاقة — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://shamsalnil.com/sitemap-index.xml
