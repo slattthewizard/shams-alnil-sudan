@@ -36,7 +36,8 @@
   },
   {
     "draft": "drafts/fake-solar-panels-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-16T15:08:41.658166Z"
   },
   {
     "draft": "drafts/grid-tied-factories-2026-08-12.md",
