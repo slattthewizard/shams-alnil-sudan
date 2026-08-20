@@ -56,11 +56,13 @@
   },
   {
     "draft": "drafts/solar-inverter-faults-2026-08-11.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-20T15:21:24.316789Z"
   },
   {
     "draft": "drafts/solar-output-loss-causes-2026-08-11.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-20T15:21:24.317507Z"
   },
   {
     "draft": "drafts/solar-maintenance-schedule-2026-08-11.md",
