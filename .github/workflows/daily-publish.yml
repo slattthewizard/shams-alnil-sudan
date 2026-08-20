@@ -21,6 +21,8 @@ jobs:
           python-version: '3.12'
 
       - name: Run publisher
+        env:
+          POSTS_PER_RUN: '2'
         run: python .github/scripts/cloud_publish.py
 
       - name: Commit and push

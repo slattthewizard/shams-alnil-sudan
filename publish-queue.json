@@ -55,7 +55,47 @@
     "publishedAt": "2026-08-19T15:17:27.666157Z"
   },
   {
+    "draft": "drafts/solar-inverter-faults-2026-08-11.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-output-loss-causes-2026-08-11.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-maintenance-schedule-2026-08-11.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-standards-sudan-2026-08-11.md",
+    "published": false
+  },
+  {
     "draft": "drafts/mc4-connector-failures-2026-08-12.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-irrigation-sudan-2026-08-11.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-warranty-terms-2026-08-12.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-import-customs-2026-08-12.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-monitoring-remote-2026-08-12.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-pump-faults-2026-08-12.md",
+    "published": false
+  },
+  {
+    "draft": "drafts/solar-trackers-vs-fixed-2026-08-12.md",
     "published": false
   },
   {
@@ -67,47 +107,7 @@
     "published": false
   },
   {
-    "draft": "drafts/solar-import-customs-2026-08-12.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-inverter-faults-2026-08-11.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-irrigation-sudan-2026-08-11.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-maintenance-schedule-2026-08-11.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-monitoring-remote-2026-08-12.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-output-loss-causes-2026-08-11.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-pump-faults-2026-08-12.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-standards-sudan-2026-08-11.md",
-    "published": false
-  },
-  {
     "draft": "drafts/solar-telecom-towers-2026-08-12.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-trackers-vs-fixed-2026-08-12.md",
-    "published": false
-  },
-  {
-    "draft": "drafts/solar-warranty-terms-2026-08-12.md",
     "published": false
   }
 ]

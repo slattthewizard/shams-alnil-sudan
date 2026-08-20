@@ -9,7 +9,7 @@ import re
 import os
 import json
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 
@@ -215,34 +215,10 @@ def convert_and_write(draft_path, output_path, publish_date, slug):
     return True
 
 
-def main():
-    script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parent.parent
-
-    queue_path = repo_root / 'publish-queue.json'
-    if not queue_path.exists():
-        print("ERROR: publish-queue.json not found")
-        sys.exit(1)
-
-    with open(queue_path, 'r', encoding='utf-8') as f:
-        queue = json.load(f)
-
-    next_item = None
-    next_idx = None
-    for i, item in enumerate(queue):
-        if not item.get('published'):
-            next_item = item
-            next_idx = i
-            break
-
-    if next_item is None:
-        print("All articles have been published!")
-        commit_msg_path = script_dir / 'commit-msg.txt'
-        with open(commit_msg_path, 'w') as f:
-            f.write('No new articles to publish')
-        sys.exit(0)
-
-    draft_rel = next_item['draft']
+def publish_one(repo_root, queue, idx):
+    """Convert one queued draft into the content collection. Returns slug or None."""
+    item = queue[idx]
+    draft_rel = item['draft']
     draft_path = repo_root / draft_rel
     slug = re.sub(r'-\d{4}-\d{2}-\d{2}\.md$', '', Path(draft_rel).name)
     slug = re.sub(r'\.md$', '', slug)
@@ -253,24 +229,68 @@ def main():
 
     if not draft_path.exists():
         print(f"ERROR: Draft file not found: {draft_path}")
+        return None
+
+    if not convert_and_write(str(draft_path), str(output_path), publish_date, slug):
+        print(f"ERROR: Conversion failed for {slug}")
+        return None
+
+    item['published'] = True
+    item['publishedAt'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+    return slug
+
+
+def main():
+    script_dir = Path(__file__).resolve().parent
+    repo_root = script_dir.parent.parent
+    commit_msg_path = script_dir / 'commit-msg.txt'
+
+    # Posts published per run. Overridable from the workflow via env.
+    try:
+        per_run = max(1, int(os.environ.get('POSTS_PER_RUN', '2')))
+    except ValueError:
+        per_run = 2
+
+    queue_path = repo_root / 'publish-queue.json'
+    if not queue_path.exists():
+        print("ERROR: publish-queue.json not found")
         sys.exit(1)
 
-    success = convert_and_write(str(draft_path), str(output_path), publish_date, slug)
-    if not success:
-        print("ERROR: Conversion failed")
-        sys.exit(1)
+    with open(queue_path, 'r', encoding='utf-8') as f:
+        queue = json.load(f)
 
-    queue[next_idx]['published'] = True
-    queue[next_idx]['publishedAt'] = datetime.utcnow().isoformat() + 'Z'
+    pending = [i for i, item in enumerate(queue) if not item.get('published')]
+
+    if not pending:
+        print("All articles have been published!")
+        with open(commit_msg_path, 'w', encoding='utf-8') as f:
+            f.write('No new articles to publish')
+        sys.exit(0)
+
+    published = []
+    for idx in pending[:per_run]:
+        slug = publish_one(repo_root, queue, idx)
+        if slug:
+            published.append(slug)
+
+    if not published:
+        print("ERROR: nothing published")
+        sys.exit(1)
 
     with open(queue_path, 'w', encoding='utf-8') as f:
-        json.dump(queue, f, indent=2)
+        json.dump(queue, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
-    commit_msg_path = script_dir / 'commit-msg.txt'
-    with open(commit_msg_path, 'w') as f:
-        f.write(f'Publish blog post: {slug}')
+    if len(published) == 1:
+        msg = f'Publish blog post: {published[0]}'
+    else:
+        msg = 'Publish blog posts: ' + ', '.join(published)
+    with open(commit_msg_path, 'w', encoding='utf-8') as f:
+        f.write(msg)
 
-    print(f"Successfully published: {slug}")
+    print(f"Successfully published {len(published)}: {', '.join(published)}")
+    remaining = len([i for i, item in enumerate(queue) if not item.get('published')])
+    print(f"Remaining in queue: {remaining}")
 
 
 if __name__ == '__main__':
