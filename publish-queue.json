@@ -66,11 +66,13 @@
   },
   {
     "draft": "drafts/solar-maintenance-schedule-2026-08-11.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-21T15:20:15.869911Z"
   },
   {
     "draft": "drafts/solar-standards-sudan-2026-08-11.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-21T15:20:15.870716Z"
   },
   {
     "draft": "drafts/mc4-connector-failures-2026-08-12.md",
