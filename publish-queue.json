@@ -86,11 +86,13 @@
   },
   {
     "draft": "drafts/solar-warranty-terms-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-23T15:08:47.263080Z"
   },
   {
     "draft": "drafts/solar-import-customs-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-23T15:08:47.264076Z"
   },
   {
     "draft": "drafts/solar-monitoring-remote-2026-08-12.md",
