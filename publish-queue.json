@@ -96,11 +96,13 @@
   },
   {
     "draft": "drafts/solar-monitoring-remote-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-24T15:25:58.581255Z"
   },
   {
     "draft": "drafts/solar-pump-faults-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-24T15:25:58.582549Z"
   },
   {
     "draft": "drafts/solar-trackers-vs-fixed-2026-08-12.md",
