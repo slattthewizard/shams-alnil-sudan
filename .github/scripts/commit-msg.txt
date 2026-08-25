@@ -1,1 +1,1 @@
-Publish blog posts: solar-monitoring-remote, solar-pump-faults
+Publish blog posts: solar-trackers-vs-fixed, solar-cold-storage

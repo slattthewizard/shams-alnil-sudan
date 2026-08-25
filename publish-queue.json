@@ -106,11 +106,13 @@
   },
   {
     "draft": "drafts/solar-trackers-vs-fixed-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-25T15:30:19.782619Z"
   },
   {
     "draft": "drafts/solar-cold-storage-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-25T15:30:19.783908Z"
   },
   {
     "draft": "drafts/solar-health-clinics-2026-08-12.md",
