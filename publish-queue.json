@@ -116,10 +116,12 @@
   },
   {
     "draft": "drafts/solar-health-clinics-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-26T16:06:57.749640Z"
   },
   {
     "draft": "drafts/solar-telecom-towers-2026-08-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-26T16:06:57.750546Z"
   }
 ]
