@@ -124,7 +124,12 @@ def parse_frontmatter(content):
 def extract_faq(body):
     """Pull FAQ Q&A pairs from a '## FAQ'-style section for schema."""
     pairs = []
-    faq_match = re.search(r'^##\s+.*(?:FAQ|Frequently Asked).*$', body, re.MULTILINE | re.IGNORECASE)
+    # Arabic headings must be listed explicitly: this site's articles head their FAQ
+    # "## الأسئلة الشائعة", which the English-only pattern never matched, so every post
+    # published before 2026-08-27 shipped with no FAQPage schema at all.
+    faq_match = re.search(
+        r'^##\s+.*(?:FAQ|Frequently Asked|الأسئلة الشائعة|أسئلة شائعة|الأسئلة المتكررة).*$',
+        body, re.MULTILINE | re.IGNORECASE)
     if not faq_match:
         return pairs
     section = body[faq_match.end():]
