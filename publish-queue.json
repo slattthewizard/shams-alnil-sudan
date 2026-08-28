@@ -141,11 +141,13 @@
   },
   {
     "draft": "drafts/bifacial-590w-panels-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-28T00:07:01.601791Z"
   },
   {
     "draft": "drafts/hybrid-inverter-brands-sudan-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-28T00:07:01.602912Z"
   },
   {
     "draft": "drafts/lithium-10kwh-battery-price-2026-08-27.md",
