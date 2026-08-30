@@ -171,11 +171,13 @@
   },
   {
     "draft": "drafts/solar-earthing-lightning-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-30T18:12:27.861372Z"
   },
   {
     "draft": "drafts/solar-inspection-fees-sudan-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-30T18:12:27.862401Z"
   },
   {
     "draft": "drafts/solar-installation-cost-sudan-2026-08-27.md",
