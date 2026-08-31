@@ -181,11 +181,13 @@
   },
   {
     "draft": "drafts/solar-installation-cost-sudan-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-31T20:25:29.261924Z"
   },
   {
     "draft": "drafts/solar-inverter-prices-sudan-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-08-31T20:25:29.262983Z"
   },
   {
     "draft": "drafts/solar-poultry-farms-2026-08-27.md",
