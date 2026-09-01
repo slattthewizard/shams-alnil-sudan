@@ -191,11 +191,13 @@
   },
   {
     "draft": "drafts/solar-poultry-farms-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-01T18:00:19.666764Z"
   },
   {
     "draft": "drafts/solar-price-drop-2026-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-01T18:00:19.667893Z"
   },
   {
     "draft": "drafts/solar-price-per-watt-2026-08-27.md",
