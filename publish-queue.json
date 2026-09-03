@@ -211,11 +211,13 @@
   },
   {
     "draft": "drafts/solar-pump-3hp-5hp-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-03T18:08:44.564888Z"
   },
   {
     "draft": "drafts/solar-pump-7-5hp-10hp-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-03T18:08:44.565710Z"
   },
   {
     "draft": "drafts/solar-pump-inverter-7-5kw-2026-08-27.md",
