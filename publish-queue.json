@@ -231,11 +231,13 @@
   },
   {
     "draft": "drafts/solar-quote-line-items-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-05T16:58:03.042443Z"
   },
   {
     "draft": "drafts/solar-system-10kw-20kw-cost-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-05T16:58:03.043495Z"
   },
   {
     "draft": "drafts/submersible-vs-surface-pump-2026-08-27.md",
