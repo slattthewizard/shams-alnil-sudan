@@ -241,11 +241,13 @@
   },
   {
     "draft": "drafts/submersible-vs-surface-pump-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-06T17:22:27.320592Z"
   },
   {
     "draft": "drafts/used-solar-equipment-ban-2026-08-27.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-06T17:22:27.321596Z"
   },
   {
     "draft": "drafts/battery-200ah-solar-2026-09-05.md",
