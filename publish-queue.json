@@ -251,11 +251,13 @@
   },
   {
     "draft": "drafts/battery-200ah-solar-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-07T18:53:19.092215Z"
   },
   {
     "draft": "drafts/solar-ac-sudan-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-07T18:53:19.093378Z"
   },
   {
     "draft": "drafts/solar-inverter-types-2026-09-05.md",
