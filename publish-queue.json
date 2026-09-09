@@ -271,11 +271,13 @@
   },
   {
     "draft": "drafts/solar-evaporative-cooler-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-09T18:02:39.948595Z"
   },
   {
     "draft": "drafts/solar-home-cost-sudan-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-09T18:02:39.949644Z"
   },
   {
     "draft": "drafts/solar-pump-well-depth-2026-09-05.md",
