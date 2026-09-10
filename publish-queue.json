@@ -281,11 +281,13 @@
   },
   {
     "draft": "drafts/solar-pump-well-depth-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-10T17:55:02.363584Z"
   },
   {
     "draft": "drafts/solar-plant-30-100kw-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-10T17:55:02.364504Z"
   },
   {
     "draft": "drafts/solar-panel-1000w-2026-09-05.md",
