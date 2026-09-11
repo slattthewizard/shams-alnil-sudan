@@ -291,10 +291,12 @@
   },
   {
     "draft": "drafts/solar-panel-1000w-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-11T17:56:56.687738Z"
   },
   {
     "draft": "drafts/solar-battery-types-2026-09-05.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-11T17:56:56.689073Z"
   }
 ]
