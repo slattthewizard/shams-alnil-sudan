@@ -542,15 +542,16 @@ const {
 (function () {
   var GA_ID = 'G-VDBN8PBQH6';
   if (GA_ID) {
+    // Queue commands now so clicks made before gtag.js arrives are kept; only the script load waits for idle.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
     function loadGA() {
       var s = document.createElement('script');
       s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
       s.async = true;
       document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function(){ dataLayer.push(arguments); };
-      gtag('js', new Date());
-      gtag('config', GA_ID, { anonymize_ip: true });
     }
     if ('requestIdleCallback' in window) requestIdleCallback(loadGA, { timeout: 4000 });
     else setTimeout(loadGA, 3500);
@@ -562,6 +563,12 @@ const {
     var tel = e.target.closest('a[href^="tel:"]');
     if (tel) {
       track('phone_click', { link_text: tel.textContent.trim().slice(0, 100), page_path: location.pathname });
+      return;
+    }
+    // Any link that opens WhatsApp (the floating panel's button or an inline wa.me link). Key event in GA4.
+    var wa = e.target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com/"], a[href^="whatsapp:"]');
+    if (wa) {
+      track('whatsapp_click', { link_location: wa.closest('#waPanel') ? 'floating_panel' : 'inline', page_path: location.pathname });
       return;
     }
     var btn = e.target.closest('a.btn-green, a.btn-blue, a.btn-primary, a.btn-copper, a.btn-bark, a.btn-cream, a.btn-white-outline, a.btn-outline-white, a.wwp-tracked');
@@ -601,6 +608,7 @@ const {
     e.stopPropagation();
     var open = panel.classList.toggle('wa-open');
     fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open && typeof window.gtag === 'function') window.gtag('event', 'whatsapp_panel_open', { page_path: location.pathname });
   });
   document.addEventListener('click', function (e) {
     if (!panel.contains(e.target) && e.target !== fab) close();
