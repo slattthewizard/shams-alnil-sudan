@@ -252,9 +252,9 @@ def main():
 
     # Posts published per run. Overridable from the workflow via env.
     try:
-        per_run = max(1, int(os.environ.get('POSTS_PER_RUN', '2')))
+        per_run = max(1, int(os.environ.get('POSTS_PER_RUN', '1')))
     except ValueError:
-        per_run = 2
+        per_run = 1
 
     queue_path = repo_root / 'publish-queue.json'
     if not queue_path.exists():
@@ -263,6 +263,22 @@ def main():
 
     with open(queue_path, 'r', encoding='utf-8') as f:
         queue = json.load(f)
+
+    # Cadence gate: one post every 48 h. The cron fires daily at 15:00 UTC; a scheduled
+    # run publishes only when the newest publishedAt is at least MIN_HOURS old, so every
+    # second run publishes. 36 (not 48) tolerates GitHub cron delays of up to 12 h.
+    # Manual "Run workflow" sets FORCE_PUBLISH=true and skips the gate.
+    MIN_HOURS = 36
+    stamps = []
+    for item in queue:
+        if item.get('published') and item.get('publishedAt'):
+            ts = datetime.fromisoformat(item['publishedAt'].replace('Z', '+00:00'))
+            stamps.append(ts if ts.tzinfo else ts.replace(tzinfo=timezone.utc))
+    if stamps and os.environ.get('FORCE_PUBLISH', '').lower() != 'true':
+        age_h = (datetime.now(timezone.utc) - max(stamps)).total_seconds() / 3600
+        if age_h < MIN_HOURS:
+            print(f"Cadence gate: last post {age_h:.1f} h ago (< {MIN_HOURS} h), nothing published this run")
+            sys.exit(0)
 
     pending = [i for i, item in enumerate(queue) if not item.get('published')]
 
