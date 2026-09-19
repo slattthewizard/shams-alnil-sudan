@@ -1,1 +1,1 @@
-Publish blog post: solar-fridge-freezer
+Publish blog post: mppt-vs-pwm-controller
