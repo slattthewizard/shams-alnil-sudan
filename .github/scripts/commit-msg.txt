@@ -1,1 +1,1 @@
-Publish blog post: mppt-vs-pwm-controller
+Publish blog post: solar-panel-datasheet

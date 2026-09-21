@@ -321,7 +321,8 @@
   },
   {
     "draft": "drafts/solar-panel-datasheet-2026-09-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-21T19:45:59.189653Z"
   },
   {
     "draft": "drafts/solar-wiring-diagram-2026-09-12.md",
