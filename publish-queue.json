@@ -326,7 +326,8 @@
   },
   {
     "draft": "drafts/solar-wiring-diagram-2026-09-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-23T18:41:35.672785Z"
   },
   {
     "draft": "drafts/solar-cable-string-calculations-2026-09-12.md",
