@@ -331,7 +331,8 @@
   },
   {
     "draft": "drafts/solar-cable-string-calculations-2026-09-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-25T18:58:08.126966Z"
   },
   {
     "draft": "drafts/solar-inverter-settings-2026-09-12.md",
