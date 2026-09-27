@@ -336,7 +336,8 @@
   },
   {
     "draft": "drafts/solar-inverter-settings-2026-09-12.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-09-27T18:41:06.977488Z"
   },
   {
     "draft": "drafts/solar-without-batteries-2026-09-12.md",
