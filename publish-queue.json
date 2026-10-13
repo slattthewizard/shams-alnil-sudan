@@ -351,7 +351,8 @@
   },
   {
     "draft": "drafts/lithium-battery-5kwh-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-10-13T20:23:56.776406Z"
   },
   {
     "draft": "drafts/solar-pump-1hp-2hp-2026-10-13.md",
