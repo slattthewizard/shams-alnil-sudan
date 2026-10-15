@@ -356,7 +356,8 @@
   },
   {
     "draft": "drafts/solar-pump-1hp-2hp-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-10-15T18:43:14.312762Z"
   },
   {
     "draft": "drafts/solar-panel-daily-output-2026-10-13.md",
