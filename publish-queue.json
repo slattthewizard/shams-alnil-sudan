@@ -396,7 +396,8 @@
   },
   {
     "draft": "drafts/growatt-inverter-error-codes-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-10-31T18:52:42.480061Z"
   },
   {
     "draft": "drafts/lithium-battery-15kwh-plus-2026-10-13.md",
