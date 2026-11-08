@@ -416,7 +416,8 @@
   },
   {
     "draft": "drafts/solar-schools-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-11-08T19:12:26.611059Z"
   },
   {
     "draft": "drafts/solar-backup-power-cuts-2026-10-13.md",
