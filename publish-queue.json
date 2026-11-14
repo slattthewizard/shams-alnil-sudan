@@ -431,7 +431,8 @@
   },
   {
     "draft": "drafts/solar-hotels-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-11-14T19:31:04.035687Z"
   },
   {
     "draft": "drafts/starlink-solar-power-2026-10-13.md",
