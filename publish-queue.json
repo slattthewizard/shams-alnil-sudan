@@ -436,7 +436,8 @@
   },
   {
     "draft": "drafts/starlink-solar-power-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-11-16T23:33:06.851828Z"
   },
   {
     "draft": "drafts/inverter-overload-trips-2026-10-13.md",
