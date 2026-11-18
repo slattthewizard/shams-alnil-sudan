@@ -441,7 +441,8 @@
   },
   {
     "draft": "drafts/inverter-overload-trips-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-11-18T22:23:36.804640Z"
   },
   {
     "draft": "drafts/deye-inverter-error-codes-2026-10-13.md",
