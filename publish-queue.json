@@ -451,7 +451,8 @@
   },
   {
     "draft": "drafts/battery-100ah-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-11-22T20:51:24.898498Z"
   },
   {
     "draft": "drafts/center-pivot-solar-2026-10-13.md",
