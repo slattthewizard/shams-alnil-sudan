@@ -456,7 +456,8 @@
   },
   {
     "draft": "drafts/center-pivot-solar-2026-10-13.md",
-    "published": false
+    "published": true,
+    "publishedAt": "2026-11-25T23:23:00.014071Z"
   },
   {
     "draft": "drafts/solar-panel-types-mono-poly-topcon-2026-10-13.md",
